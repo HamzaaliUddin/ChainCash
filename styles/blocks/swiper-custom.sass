@@ -1,0 +1,52 @@
+.swiper
+    .swiper-button-prev,
+    .swiper-button-next
+        z-index: 3
+        width: 28px
+        height: 28px
+        border: none
+        background: $p0
+        border-radius: 50%
+        box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.14)
+        -webkit-tap-highlight-color: rgba(0,0,0,0)
+        transition: all .2s
+        &:after
+            display: none
+        &:before
+            content: ""
+            position: absolute
+            top: 50%
+            left: 50%
+            width: 14px
+            height: 14px
+            transform: translate(-50%,-50%)
+            background-repeat: no-repeat
+            background-position: 50% 50%
+            background-size: 100% auto
+            transition: all .2s
+        &:hover
+            background: $s1
+        &.swiper-button-disabled
+            opacity: .5
+    .swiper-button-prev
+        &:before
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Cpath d='M8.54 1.85a.75.75 0 0 1 1.133.977l-.073.084-3.803 3.803a.41.41 0 0 0-.051.51l.051.063 3.803 3.803a.75.75 0 0 1-.977 1.133l-.084-.073-3.803-3.803a1.91 1.91 0 0 1-.117-2.566l.117-.128L8.54 1.85z' fill='%231a1c1e'/%3E%3C/svg%3E")
+    .swiper-button-next
+        &:before
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Cpath d='M5.46 1.85a.75.75 0 0 0-1.133.977l.073.084 3.803 3.803a.41.41 0 0 1 .051.51l-.051.063L4.4 11.09a.75.75 0 0 0 .977 1.133l.084-.073 3.803-3.803a1.91 1.91 0 0 0 .117-2.566l-.117-.128L5.46 1.85z' fill='%231a1c1e'/%3E%3C/svg%3E")
+
+.contact-swiper
+    overflow: visible
+    padding: 0 40px
+    .swiper-slide
+        opacity: 0
+        visibility: hidden
+        transition: all .2s
+        &.swiper-slide-visible
+            opacity: 1
+            visibility: visible
+    .swiper-button-prev
+        left: 12px
+    .swiper-button-next
+        right: 12px
+

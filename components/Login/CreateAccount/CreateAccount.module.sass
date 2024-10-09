@@ -1,0 +1,37 @@
+@import @/styles/helpers
+
+.field,
+.line,
+.button
+    &:not(:last-child)
+        margin-bottom: 32px
+
+.line
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.link
+    font-size: 16px
+    font-weight: 600
+    color: $p5
+    transition: color .2s
+    +m
+        font-size: 14px
+    &:hover
+        color: $p6
+
+.foot
+    display: flex
+    justify-content: center
+    align-items: center
+    .link
+        margin-left: 5px
+
+.text
+    font-size: 16px
+    font-weight: 600
+    color: $s4
+    +m
+        font-size: 14px
+

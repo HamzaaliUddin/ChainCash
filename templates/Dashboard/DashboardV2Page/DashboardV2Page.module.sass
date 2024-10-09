@@ -1,0 +1,57 @@
+@import @/styles/helpers
+
+.row
+    display: flex
+    margin-top: -24px
+    +w
+        flex-wrap: wrap
+    +t
+        display: block
+
+.col
+    &:nth-child(1)
+        flex-shrink: 0
+        width: 411px
+        +xl
+            width: 351px
+        +w
+            width: 420px
+        +d
+            width: 390px
+        +t
+            width: 100%
+    &:nth-child(2)
+        width: calc(100% - 836px)
+        padding: 0 24px
+        +xl
+            width: calc(100% - 716px)
+        +w
+            width: calc(100% - 420px)
+            padding-right: 0
+        +d
+            width: calc(100% - 390px)
+        +t
+            width: 100%
+            padding-left: 0
+    &:nth-child(3)
+        flex-shrink: 0
+        width: 425px
+        +xl
+            width: 365px
+        +w
+            display: flex
+            width: auto
+            flex-grow: 1
+            margin: 0 -12px
+        +t
+            display: block
+            margin: 0
+
+.card
+    +w
+        flex: 0 0 calc(50% - 24px)
+        width: calc(50% - 24px)
+        margin: 0 12px
+    +t
+        width: 100%
+        margin: 0

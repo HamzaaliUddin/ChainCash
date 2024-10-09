@@ -1,0 +1,61 @@
+@import @/styles/helpers
+
+.notifications
+    position: relative
+    margin-right: 14px
+    +m
+        position: static
+        margin-right: 12px
+    &.active
+        .button
+            svg
+                fill: $p4
+        .body
+            transform: translateY(0)
+            opacity: 1
+            visibility: visible
+
+.button
+    width: 48px
+    height: 48px
+    border-radius: 50%
+    background: rgba($p0, .07)
+    font-size: 0
+    -webkit-tap-highlight-color: rgba(0,0,0,0)
+    +m
+        width: 42px
+        height: 42px
+    svg
+        fill: $p0
+        transition: fill .2s
+        +m
+            width: 22px
+            height: 22px
+    &:hover
+        svg
+            fill: $p4
+
+.body
+    position: absolute
+    top: calc(100% + 5px)
+    right: 0
+    width: 428px
+    padding: 24px
+    background: $p0
+    box-shadow: 0px 14px 84px rgba(0, 0, 0, 0.1)
+    border-radius: 16px
+    transform: translateY(10px)
+    opacity: 0
+    visibility: hidden
+    transition: all .3s
+    +m
+        top: calc(100% + 14px)
+        right: 0
+        left: 0
+        width: 100%
+        padding: 24px 16px
+
+.title
+    margin-bottom: 24px
+    font-size: 24px
+    font-weight: 600

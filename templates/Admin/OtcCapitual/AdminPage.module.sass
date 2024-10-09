@@ -1,0 +1,147 @@
+@import @/styles/helpers
+
+.row
+    display: flex
+    margin-top: -24px
+    +w
+        flex-wrap: wrap
+    +t
+        display: block
+
+.col
+    &:nth-child(1)
+        flex-shrink: 0
+        width: 425px
+        +xl
+            width: 365px
+        +w
+            width: 420px
+        +d
+            width: 390px
+        +t
+            width: 100%
+    &:nth-child(2)
+        width: calc(100% - 836px)
+        padding: 0 24px
+        +xl
+            width: calc(100% - 716px)
+        +w
+            width: calc(100% - 420px)
+            padding-right: 0
+        +d
+            width: calc(100% - 390px)
+        +t
+            width: 100%
+            padding-left: 0
+    &:nth-child(3)
+        flex-shrink: 0
+        width: 411px
+        +xl
+            width: 351px
+        +w
+            display: flex
+            width: auto
+            flex-grow: 1
+            margin: 0 -12px
+        +m
+            display: block
+            margin: 0
+
+.line
+    display: flex
+    margin: 0 -12px
+    +m
+        display: block
+        margin: 0
+
+.card
+    +w
+        flex: 0 0 calc(50% - 24px)
+        width: calc(50% - 24px)
+        margin: 0 12px
+    +m
+        width: 100%
+        margin: 0
+
+.transaction
+    padding: 24px
+    background: $p0
+    border-radius: 16px
+
+.inner
+    +w
+        display: flex
+        margin: 0 -24px
+        padding-bottom: 24px
+        overflow: auto
+        -webkit-overflow-scrolling: touch
+        &::-webkit-scrollbar
+            height: 12px
+        &::-webkit-scrollbar-track
+            background-color: $s1
+            border: 2px solid $s1
+            border-radius: 6px
+            margin-left: 24px
+            margin-right: 24px
+        &::-webkit-scrollbar-thumb
+            background-color: $s3
+            border: 2px solid $s1
+            border-radius: 6px
+        &:before,
+        &:after
+            content: ""
+            flex-shrink: 0
+            width: 24px
+
+.table
+    margin-top: 24px
+    +w
+        min-width: 1252px
+
+.head
+    display: flex
+
+.cell
+    display: flex
+    align-items: center
+    flex-shrink: 0
+    height: 48px
+    background: $s1
+    font-size: 16px
+    font-weight: 600
+    color: $s4
+    &:nth-child(1)
+        width: 200px
+    &:nth-child(2)
+        width: 121px
+    &:nth-child(3)
+        flex: 1 0 auto
+    &:nth-child(4)
+        width: 171px
+    &:nth-child(5)
+        width: 229px
+    &:nth-child(6)
+        width: 155px
+    &:nth-child(7)
+        width: 151px
+    &:nth-child(8)
+        width: 124px
+    &:not(:nth-child(1))
+        padding-left: 12px
+
+.sorting
+    margin-left: 6px
+    font-size: 0
+    svg
+        fill: $s4
+        transition: fill .2s
+    &:hover,
+    &.active
+        svg
+            fill: $p5
+
+.checkbox
+    position: relative
+    top: -1px
+    margin: auto
+

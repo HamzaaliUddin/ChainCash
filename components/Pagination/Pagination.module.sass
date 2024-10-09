@@ -1,0 +1,35 @@
+@import @/styles/helpers
+
+.pagination
+    display: flex
+    align-items: center
+    +m
+        justify-content: center
+
+.prev,
+.next
+    flex-shrink: 0
+    width: 40px
+    height: 40px
+    border: 1px solid $s2
+    border-radius: 8px
+    font-size: 0
+    transition: all .2s
+    &:hover
+        background: $s1
+
+.prev
+    margin-right: 16px
+
+.next
+    margin-left: 16px
+
+.number
+    width: 36px
+    height: 32px
+    font-weight: 600
+    color: rgba($s5, .7)
+    transition: color .2s
+    &:hover,
+    &.active
+        color: $s5

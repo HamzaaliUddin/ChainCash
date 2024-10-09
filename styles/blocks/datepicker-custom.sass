@@ -1,0 +1,13 @@
+.react-datepicker-popper
+    z-index: 10
+    
+.react-datepicker
+    font-family: inherit !important
+    box-shadow: 0 2px 20px rgba(#000, .1)
+    &__navigation
+        top: 7px
+    &__navigation-icon::before
+        transition: border-color .2s
+
+.react-datepicker-popper[data-placement^=top] .react-datepicker__triangle, .react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle
+    margin-left: -16px

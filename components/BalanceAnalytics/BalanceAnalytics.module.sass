@@ -1,0 +1,46 @@
+@import @/styles/helpers
+
+.card
+    +d
+        position: relative
+
+.settings
+    display: flex
+    align-self: center
+    margin-right: auto
+    +d
+        position: absolute
+        top: 64px
+        left: 24px
+        right: 24px
+    +m
+        flex-direction: column
+
+.toggle
+    &:not(:last-child)
+        margin-right: 32px
+        +m
+            margin: 0 0 12px
+
+.chart
+    height: 306px
+    margin: 40px 0 0 -18px
+    +d
+        margin-top: 56px
+    +m
+        margin-top: 96px
+
+.tooltip
+    padding: 7px 13px
+    background: #6E7277
+    border-radius: 7px
+    color: $p0
+
+.tooltipTitle
+    margin-bottom: 3px
+    +fs12
+    opacity: .8
+
+.tooltipValue
+    font-size: 16px
+    font-weight: 600

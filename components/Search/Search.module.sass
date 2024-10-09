@@ -1,0 +1,58 @@
+@import @/styles/helpers
+
+.search
+    position: relative
+    &.searchLight
+        .input
+            border-color: transparent
+            background: #2C3444
+            color: $p0
+            &::placeholder
+                color: rgba($p0, .5)
+            &:focus
+                border-color: rgba($p0, .15)
+        .button
+            svg
+                fill: $p0
+            &:hover
+                svg
+                    fill: $p4
+    &.searchLarge
+        .input
+            height: 62px
+            padding-left: 59px
+            border-radius: 15px
+        .button
+            padding-left: 12px
+           
+.input
+    width: 100%
+    height: 48px
+    padding: 0 18px 0 54px
+    border-radius: 24px
+    background: $p0
+    border: 1px solid $s2
+    font-size: 14px
+    font-weight: 500
+    color: $s5
+    transition: border-color .2s
+    &:focus
+        border-color: $i5
+    &::placeholder
+        color: $s4
+
+.button
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 54px
+    svg
+        fill: $s5
+        transition: fill .2s
+    &:hover
+        svg
+            fill: $p4

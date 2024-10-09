@@ -1,0 +1,55 @@
+@import @/styles/helpers
+
+.search
+    position: relative
+    margin-bottom: 16px
+
+.input
+    width: 100%
+    height: 20px
+    padding-right: 32px
+    border-radius: 0
+    border: none
+    background: none
+    font-size: 12px
+    font-weight: 500
+    color: $s5
+    &::placeholder
+        color: $s3
+
+.button
+    position: absolute
+    top: 1px
+    right: 0
+    svg
+        fill: $s5
+        transition: fill .2s
+    &:hover
+        svg
+            fill: $p5
+
+.list
+    overflow: hidden
+    margin: 0 -12px
+
+.item
+    text-align: center
+    padding: 0 8px
+    cursor: pointer
+
+.avatar
+    position: relative
+    width: 64px
+    height: 64px
+    border-radius: 50%
+    margin: 0 auto 12px
+    img
+        border-radius: 50%
+
+.title
+    font-weight: 600
+
+.login
+    +fs12
+    font-weight: 600
+    color: $s3

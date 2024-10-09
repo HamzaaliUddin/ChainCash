@@ -1,0 +1,48 @@
+@import @/styles/helpers
+
+.toggle
+    position: relative
+    flex-shrink: 0
+    display: inline-flex
+    user-select: none
+    cursor: pointer
+    &:hover
+        .inner
+            border-color: $s4
+            &:before
+                background: $s4
+
+.input
+    position: absolute
+    top: 0
+    left: 0
+    opacity: 0
+    &:checked + .inner
+        border-color: #34B67F
+        &:before
+            transform: translate(16px,-50%)
+            background: #34B67F
+
+.inner
+    display: block
+    width: 40px
+    height: 24px
+    border: 1px solid $s3
+    border-radius: 12px
+    transition: border-color .2s
+    &:before
+        content: ""
+        position: absolute
+        top: 50%
+        left: 4px
+        width: 16px
+        height: 16px
+        transform: translateY(-50%)
+        background: $s3
+        border-radius: 50%
+        transition: transform .2s, background .2s
+
+.title
+    margin-left: 16px
+    font-weight: 600
+    color: $s4

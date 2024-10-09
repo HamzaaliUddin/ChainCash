@@ -1,0 +1,135 @@
+@import @/styles/helpers
+
+.settings
+    display: flex
+    align-items: flex-start
+    +t
+        display: block
+        padding: 24px
+        border-radius: 16px
+        background: $p0
+    .card
+        flex-grow: 1
+        margin: 0 0 0 24px
+        padding: 32px
+        +t
+            margin: 0
+            padding: 0
+            border-radius: 0
+
+.menu
+    position: sticky
+    top: 20px
+    display: flex
+    flex-direction: column
+    flex-shrink: 0
+    width: 417px
+    padding: 24px
+    border-radius: 16px
+    background: $p0
+    +d
+        width: 320px
+    +t
+        flex-direction: row
+        width: auto
+        margin-bottom: 32px
+        padding: 0
+        border-radius: 0
+    +m
+        margin: 0 -24px 24px
+        -webkit-overflow-scrolling: touch
+        overflow: auto
+        scrollbar-width: none
+        -ms-overflow-style: none
+        &::-webkit-scrollbar
+            display: none
+            width: 0
+            height: 0
+        &:before,
+        &:after
+            content: ""
+            flex-shrink: 0
+            width: 24px
+
+.link
+    display: flex
+    align-items: center
+    padding: 24px
+    border-radius: 16px
+    font-size: 18px
+    font-weight: 600
+    color: $s5
+    transition: all .2s
+    +d
+        padding: 16px
+        font-size: 16px
+    +t
+        position: relative
+        height: 54px
+        padding: 0 24px 0
+        border-radius: 0
+        flex-shrink: 0
+        color: #A2A6AA
+        &:before
+            content: ""
+            position: absolute
+            left: 0
+            right: 0
+            bottom: 0
+            height: 1px
+            background: $s1
+            transition: all .2s
+    svg
+        transition: fill .2s
+    &:hover
+        background: $s2
+    &.active
+        background: $p5
+        box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.16)
+        color: $p0
+        +t
+            background: transparent
+            box-shadow: none
+            color: $p5
+            &:before
+                height: 2px
+                background: $p5
+        .icon
+            box-shadow: 0px 7px 24px rgba(0, 0, 0, 0.09)
+            background: $p0
+            svg
+                fill: $p5
+        .arrow
+            fill: $p0
+    &:not(:last-child)
+        margin-bottom: 12px
+        +t
+            margin: 0
+
+.icon
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 40px
+    height: 40px
+    margin-right: 16px
+    border-radius: 50%
+    background: $s1
+    transition: all .2s
+    +d
+        margin-right: 12px
+    +t
+        display: none
+
+.arrow
+    margin-left: auto
+    +t
+        display: none
+
+.wrap
+    margin-top: 32px
+    padding-top: 32px
+    border-top: 1px solid #EDF1F3
+    +m
+        margin-top: 24px
+        padding-top: 24px

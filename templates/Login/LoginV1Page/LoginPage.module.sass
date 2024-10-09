@@ -1,0 +1,101 @@
+@import @/styles/helpers
+
+.left
+    position: relative
+    display: flex
+    align-items: flex-end
+    overflow: hidden
+    background: $p7
+    +t
+        padding-top: 450px
+    +m
+        padding-top: 355px
+    
+.images
+    position: absolute
+    top: 120px
+    left: 108px
+    width: 1400px
+    +r(2200)
+        top: 77px
+        left: 88px
+        width: 1100px
+    +r(1940)
+        width: 1004px
+    +r(1520)
+        top: 32px
+        left: 48px
+    +m
+        top: 30px
+        left: 37px
+        width: 572px
+
+.image
+    &:before
+        content: ""
+        position: absolute
+        background: rgba(#1C2536, .3)
+    &:nth-child(1)
+        width: 100%
+        &:before
+            top: 23px
+            left: -16px
+            right: 350px
+            bottom: 113px
+            filter: blur(29.72px)
+    &:nth-child(2)
+        position: absolute
+        top: 19.5%
+        left: -2.3%
+        width: 31.1%
+        z-index: 2
+        img
+            border-radius: 14px
+        &:before
+            top: 36px
+            left: 21px
+            right: -36px
+            bottom: -56px
+            filter: blur(46.303px)
+    img
+        position: relative
+        z-index: 2
+
+
+.wrap
+    position: relative
+    z-index: 2
+    width: 100%
+    padding: 48px 50px 68px
+    background: $s5
+    color: $p0
+    +rh(800)
+        padding: 40px
+    +w
+        padding: 40px 32px
+    +m
+        padding: 24px 24px 32px
+
+.logo
+    margin-bottom: 40px
+    +w
+        margin-bottom: 32px
+    +m
+        margin-bottom: 40px
+
+.title
+    margin-bottom: 24px
+    +fs40
+    font-weight: 700
+    +w
+        font-size: 32px
+    +m
+        font-size: 24px
+
+.text
+    font-size: 20px
+    font-weight: 500
+    +d
+        font-size: 16px
+    +m
+        font-size: 14px

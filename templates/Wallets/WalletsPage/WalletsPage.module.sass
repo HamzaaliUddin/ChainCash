@@ -1,0 +1,54 @@
+@import @/styles/helpers
+
+.row
+    display: flex
+    margin-top: -24px
+    +t
+        display: block
+
+.col
+    &:nth-child(1)
+        flex-shrink: 0
+        width: 365px
+        +w
+            width: 320px
+        +d
+            width: 365px
+        +t
+            width: 100%
+    &:nth-child(2)
+        width: calc(100% - 365px)
+        padding-left: 24px
+        +w
+            width: calc(100% - 320px)
+        +d
+            width: calc(100% - 365px)
+        +t
+            width: 100%
+            padding-left: 0
+
+.line
+    display: flex
+    +d
+        display: block
+
+.cell
+    &:nth-child(1)
+        width: calc(100% - 401px)
+        padding-right: 24px
+        +xl
+            width: calc(100% - 351px)
+        +w
+            width: calc(100% - 320px)
+        +d
+            width: 100%
+            padding-right: 0
+    &:nth-child(2)
+        flex-shrink: 0
+        width: 401px
+        +xl
+            width: 351px
+        +w
+            width: 320px
+        +d
+            width: 100%

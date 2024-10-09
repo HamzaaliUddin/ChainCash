@@ -1,0 +1,54 @@
+@import @/styles/helpers
+
+.date
+    &.dateIcon
+        input
+            padding-right: 60px
+    &.dateMedium
+        input
+            height: 48px
+            padding: 0 17px
+            border-radius: 24px
+        svg
+            right: 18px
+        &.dateIcon
+            input
+                padding-right: 48px
+
+.label
+    margin-bottom: 3px
+    font-size: 12px
+    line-height: 1.6
+    font-weight: 500
+    color: $s3
+
+.wrap
+    position: relative
+    input
+        width: 100%
+        height: 62px
+        padding: 0 23px
+        border: 1px solid $s2
+        background: $p0
+        border-radius: 15px
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
+        font-size: 14px
+        letter-spacing: 0
+        font-weight: 500
+        color: $s5
+        transition: border-color .2s
+        &::placeholder
+            color: rgba($s4, .7)
+        &:focus
+            border-color: $i5
+        &:active
+            +m
+                font-size: 16px
+    svg
+        position: absolute
+        top: 50%
+        right: 24px
+        transform: translateY(-50%)
+        pointer-events: none

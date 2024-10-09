@@ -1,0 +1,51 @@
+@import @/styles/helpers
+
+.layout
+    display: flex
+    flex-direction: column
+    flex-grow: 1
+    min-height: 100vh
+    +m
+        overflow: hidden
+
+.head
+    padding: 21px 0 77px
+    background: #1C2634
+    +m
+        padding: 24px 0 58px
+
+.title
+    font-size: 24px
+    font-weight: 600
+    color: $p0
+    +m
+        font-size: 20px
+
+.breadcrumbs
+    margin-top: 12px
+    font-size: 14px
+    font-weight: 500
+    +m
+        font-size: 12px
+    svg
+        margin: 0 16px -1px
+        fill: $p0
+        +m
+            margin: 0 12px -2px
+
+.link
+    color: #A2A6AA
+    transition: color .2s
+    &:hover
+        color: $p0
+
+.text
+    display: inline
+    font-weight: 600
+    color: $p0
+
+.body
+    margin-top: -55px
+    padding-bottom: 50px
+    +m
+        margin-top: -27px

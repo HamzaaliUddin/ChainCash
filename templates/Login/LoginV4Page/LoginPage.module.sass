@@ -1,0 +1,95 @@
+@import @/styles/helpers
+
+.left
+    position: relative
+    background: $s5
+    overflow: hidden
+    +t
+        min-height: 400px
+
+.right
+    +t
+        background: #F4F4F7
+
+.circles
+    position: absolute
+    left: 0
+    bottom: 0
+    z-index: 1
+    transform: translate(-20%,50%)
+    span
+        display: block
+        border-radius: 50%
+        &:nth-child(1)
+            z-index: 3
+            width: 644px
+            height: 644px
+            background: rgba($p0, .03)
+            +w
+                width: 444px
+                height: 444px
+            +m
+                width: 300px
+                height: 300px
+        &:nth-child(2)
+            position: absolute
+            left: -120px
+            bottom: -90px
+            z-index: 2
+            width: 1050px
+            height: 1050px
+            background: rgba($p0, .05)
+            +w
+                width: 750px
+                height: 750px
+            +m
+                width: 600px
+                height: 600px
+        &:nth-child(3)
+            position: absolute
+            left: -465px
+            bottom: -500px
+            z-index: 1
+            width: 1729px
+            height: 1729px
+            background: rgba($p0, .05)
+            +w
+                width: 1329px
+                height: 1329px
+            +m
+                width: 1150px
+                height: 1150px
+    
+.wrap
+    position: relative
+    z-index: 2
+    width: 100%
+    padding: 50px
+    +w
+        padding: 48px 32px
+    +m
+        padding: 48px 24px
+
+.logo
+    margin-bottom: 40px
+    +m
+        width: 90px
+
+.title
+    margin-bottom: 24px
+    +fs40
+    font-weight: 700
+    color: $p0
+    +d
+        font-size: 32px
+    +m
+        font-size: 24px
+
+.text
+    font-size: 20px
+    font-weight: 500
+    color: $s2
+    +d
+        font-size: 16px
+    +m
+        font-size: 14px

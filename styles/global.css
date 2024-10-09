@@ -1,0 +1,133 @@
+:root {
+    --scroll-bar-color: white;
+    --scroll-bar-bg-color: white;
+}
+
+.selectscroll {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scroll-bar-color) var(--scroll-bar-bg-color);
+}
+
+.selectscroll::-webkit-scrollbar {
+    width: 1px;
+}
+
+.selectscroll::-webkit-scrollbar-track {
+    background: var(--scroll-bar-bg-color);
+}
+
+.selectscroll::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-bar-color);
+    border-radius: 2px;
+    border: 1px solid var(--scroll-bar-bg-color);
+}
+
+.flex {
+    display: flex;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.h-7 {
+    height: 1.75rem;
+}
+
+.w-7 {
+    width: 1.75rem;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.z-10 {
+    z-index: 10;
+}
+
+.mx-3 {
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.right-0 {
+    right: 0px;
+}
+
+.min-w-max {
+    min-width: max-content;
+}
+
+.mt-1 {
+    margin-top: 4px;
+}
+
+.rounded-md {
+    border-radius: 12px;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.bottom-modal {
+    bottom: -7rem;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 12px 20px;
+}
+
+.bottom-modal div button span {
+    font-weight: 700;
+}
+
+.language {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 10;
+}
+
+.language > * {
+    padding-right: 0px !important;
+}
+
+.items-gap {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.hidden-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.hoverIcon {
+    color: black;
+}
+
+.hoverIcon:hover {
+    color: #31b099;
+}
+.item {
+    font-size: calc(14px + 0.5vw); /* Example: Responsive font size */
+}

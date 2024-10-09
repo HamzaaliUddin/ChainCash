@@ -1,0 +1,80 @@
+@import @/styles/helpers
+
+.card
+    position: relative
+    max-width: 317px
+    margin-left: auto
+    margin-right: auto
+    padding: 16px
+    border-radius: 16px
+    overflow: hidden
+
+.circles
+    span
+        position: absolute
+        border-style: solid
+        border-color: rgba($p0, .06)
+        border-radius: 50%
+        &:nth-child(1)
+            top: 40px
+            left: 158px
+            width: 435px
+            height: 435px
+            border-width: 50px
+        &:nth-child(2)
+            top: -59px
+            left: 51px
+            width: 570px
+            height: 570px
+            border-width: 65px
+        &:nth-child(3)
+            top: -123px
+            left: -65px
+            width: 570px
+            height: 570px
+            border-width: 65px
+
+.head,
+.number,
+.foot
+    position: relative
+    z-index: 2
+
+.head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 31px
+    margin-bottom: 11px
+
+.title
+    font-weight: 500
+    color: $s2
+
+.logo
+    font-size: 0
+
+.number
+    margin-bottom: 9px
+    font-size: 20px
+    font-weight: 600
+    color: $s1
+
+.foot
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+
+.text
+    margin-bottom: 2px
+    font-weight: 500
+    color: rgba(#EDF1F3, .6)
+
+.name
+    font-size: 16px
+    font-weight: 600
+    color: $p0
+
+.date
+    font-weight: 500
+    color: $s1

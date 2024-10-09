@@ -1,0 +1,39 @@
+[class^="button"]
+    display: inline-flex
+    text-align: center
+    align-items: center
+    justify-content: center
+    height: 48px
+    padding: 0 23px
+    background: $p5
+    border: 1px solid $p5
+    border-radius: 14px
+    font-size: 16px
+    font-weight: 600
+    letter-spacing: -.02em
+    color: $p0
+    transition: all .2s
+    svg
+        fill: $p0
+        &:nth-child(1)
+            margin-right: 10px
+        &:last-child
+            margin-left: 10px
+    &:hover
+        +rmin(1024)
+            background: $p6
+            border-color: $p6
+
+.button-stroke
+    background: transparent
+    border-color: $s2
+    color: $s5
+    svg
+        fill: $s5
+    &:hover
+        +rmin(1024)
+            background: $s1
+            border-color: $s2
+
+.button-wide
+    width: 100%       

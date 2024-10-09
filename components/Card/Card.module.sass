@@ -1,0 +1,47 @@
+@import @/styles/helpers
+
+.card
+    margin-top: 24px
+    padding: 24px
+    background: $p0
+    border-radius: 16px
+
+.head
+    display: flex
+    align-items: flex-start 
+
+.title
+    margin-right: auto
+    font-size: 18px
+    font-weight: 600
+    +m
+        padding-top: 1px
+        font-size: 16px
+
+.tooltip
+    position: relative
+    display: inline
+    margin-left: 6px
+    bottom: -3px
+
+.more
+    display: flex
+    align-items: center
+    height: 27px
+    font-weight: 500
+    color: $s3
+    transition: color .2s
+    svg
+        margin-left: 6px
+        fill: $s3
+        transition: fill .2s
+    &:hover
+        color: $s5
+        svg
+            fill: $s5
+
+.right
+    display: flex
+    align-items: center
+    min-height: 27px
+    margin-left: 12px

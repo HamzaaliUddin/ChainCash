@@ -1,0 +1,71 @@
+@import @/styles/helpers
+
+.row
+    display: flex
+    align-items: center
+    min-height: 82px
+    padding: 10px 0
+
+.cell
+    flex-shrink: 0
+    &:nth-child(1)
+        flex: 1 0 auto
+    &:nth-child(2)
+        width: 202px
+        padding-left: 24px
+    &:nth-child(3)
+        width: 120px
+        text-align: center
+        font-size: 18px
+        font-weight: 600
+    &:nth-child(4)
+        width: 122px
+        text-align: right
+
+.description
+    display: flex
+    align-items: center
+
+.logo
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 52px
+    height: 52px
+    margin-right: 16px
+    border-radius: 50%
+    background: #F4F4F7
+
+.name,
+.date
+    margin-bottom: 4px
+    font-weight: 600
+
+.name
+    font-size: 18px
+
+.date
+    font-size: 16px
+
+.business,
+.time
+    margin-top: 4px
+    font-weight: 500
+    color: $s3
+
+.status
+    display: inline-flex
+    justify-content: center
+    min-width: 96px
+    padding: 6px 8px
+    border-radius: 4px
+    font-weight: 700
+    &.success
+        background: rgba(#ECF8F0, .8)
+        color: #1C8C6E
+    &.pending
+        background: #FBF4E4
+        color: #DBAA00
+    &.canceled
+        background: #F2E7E7
+        color: #BE3F4A

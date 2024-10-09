@@ -1,0 +1,86 @@
+@import @/styles/helpers
+
+.field
+    &.fieldPassword
+        .input,
+        .textarea
+            padding-right: 61px
+    &.fieldMedium
+        .input
+            height: 48px
+            padding: 0 17px
+            border-radius: 24px
+    &.fieldIconAfter
+        .input
+            padding-right: 59px
+        .icon
+            right: 0
+    &.fieldIconBefore
+        .input
+            padding-left: 59px
+        .icon
+            left: 0
+            padding-left: 12px
+
+.label
+    margin-bottom: 3px
+    font-size: 12px
+    line-height: 1.6
+    font-weight: 500
+    color: $s3
+
+.wrap
+    position: relative
+    
+.input,
+.textarea
+    width: 100%
+    border: 1px solid $s2
+    background: $p0
+    border-radius: 15px
+    font-size: 14px
+    letter-spacing: 0
+    font-weight: 500
+    color: $s5
+    transition: border-color .2s
+    &::placeholder
+        color: rgba($s4, .7)
+    &:focus
+        border-color: $i5
+    &:active
+        +m
+            font-size: 16px
+
+.input
+    height: 62px
+    padding: 0 23px
+
+.textarea
+    height: 100px
+    padding: 13px 23px
+    resize: none
+
+.view
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 61px
+    svg
+        transition: fill .2s
+    &:hover
+        svg
+            fill: $p5
+
+.icon
+    position: absolute
+    top: 0
+    bottom: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 59px
+    pointer-events: none

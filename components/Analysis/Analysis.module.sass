@@ -1,0 +1,100 @@
+@import @/styles/helpers
+
+.card
+    +m
+        position: relative
+    &.cardRow
+        padding-bottom: 16px
+
+.analysis
+    margin-top: 16px
+    &.analysisRow
+        display: flex
+        align-items: center
+        margin-top: 14px
+        +m
+            display: block
+        .details
+            margin-bottom: 0
+            flex-grow: 1
+        .box
+            display: flex
+            align-items: flex-start
+            margin-bottom: 16px
+        .price
+            margin-bottom: 0
+        .indicator
+            margin: 0 0 0 16px
+        .chart
+            flex-shrink: 0
+            width: 180px
+            height: 110px
+            margin-left: 16px
+            +w
+                width: 230px
+            +d
+                width: 180px
+            +t
+                width: 230px
+            +m
+                margin: 24px 0 0
+                width: 100%
+                height: 140px
+
+.details
+    margin-bottom: 30px
+
+.price
+    margin-bottom: 16px
+    +fs36
+    font-weight: 700
+
+.line
+    display: flex
+    align-items: center
+    font-size: 16px
+    font-weight: 500
+
+.indicator
+    margin-right: 12px
+    padding: 3px 6px
+    background: $p1
+    border-radius: 6px
+    font-size: 14px
+    font-weight: 600
+    color: $p5
+    svg
+        transform: rotate(-45deg)
+        margin-right: 2px
+        fill: $p5
+    &.negative
+        background: $e2
+        color: $e5
+        svg
+            transform: rotate(45deg)
+            fill: $e5
+
+.expense
+    font-size: 16px
+    font-weight: 500
+    +m
+        font-size: 14px
+    span
+        font-weight: 600
+        color: $p5
+    &.negative
+        span
+            color: $e5
+
+.select
+    display: flex
+    justify-content: flex-end
+    margin-bottom: 15px
+    +m
+        position: absolute
+        top: 27px
+        right: 24px
+        margin-bottom: 0
+
+.chart
+    height: 140px

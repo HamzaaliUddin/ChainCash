@@ -1,0 +1,207 @@
+@import @/styles/helpers
+
+.header
+    position: relative
+    z-index: 30
+    display: flex
+    align-items: center
+    margin-bottom: 45px
+    +m
+        margin-bottom: 50px
+
+.wrap
+    display: flex
+    align-items: center
+    margin-right: auto
+    +t
+        position: fixed
+        top: 0
+        left: -352px
+        bottom: 0
+        z-index: 15
+        flex-direction: column
+        align-items: stretch
+        width: 250px
+        margin: 0
+        padding: 32px 24px
+        background: #1C2634
+        transition: transform .3s
+        &.visible
+            transform: translateX(352px)
+    .logo
+        margin-right: 64px
+        +d
+            margin-right: 32px
+        +t
+            width: 145px
+            margin: 0 0 56px
+
+.navigation
+    display: flex
+    +t
+        display: block
+        margin-bottom: 24px
+    +m
+        overflow: auto
+
+.link
+    position: relative
+    display: flex
+    align-items: center
+    height: 47px
+    padding: 0 34px
+    border-radius: 14px
+    font-size: 14px
+    font-weight: 500
+    color: #A2A6AA
+    transition: color .2s
+    +d
+        padding: 0 24px
+    +t
+        height: 58px
+        border-radius: 29px
+        padding: 0 34px
+        font-size: 20px
+    &:hover,
+    &.active
+        color: $p0
+    &.active
+        background: rgba($p0, .1)
+    &:not(:last-child)
+        margin-right: 10px
+        +d
+            margin-right: 0
+        +t
+            margin-bottom: 16px
+
+.logout
+    display: none
+    +t
+        display: flex
+        align-items: center
+        height: 58px
+        margin-top: auto
+        padding: 0 34px
+        font-size: 20px
+        font-weight: 500
+        color: $e3
+
+.close
+    display: none
+    +t
+        position: absolute
+        top: 88px
+        left: calc(100% + 16px)
+        display: inline-block
+        width: 42px
+        height: 42px
+        background: #495058
+        border-radius: 50%
+        font-size: 0
+        -webkit-tap-highlight-color: rgba(0,0,0,0)
+    svg
+        fill: $p0
+        
+.burger
+    display: none
+    position: relative
+    flex-shrink: 0
+    width: 48px
+    height: 48px
+    background: #2D3643
+    border-radius: 50%
+    margin-right: auto
+    font-size: 0
+    -webkit-tap-highlight-color: rgba(0,0,0,0)
+    +t
+        display: block
+    +m
+        width: 42px
+        height: 42px
+    svg
+        fill: $p0
+
+.control
+    display: flex
+    align-items: center
+    flex-shrink: 0
+    .search
+        width: 220px
+        +m
+            width: 100%
+    .input
+        +m
+            height: 42px
+            padding-right: 48px
+            border-radius: 21px
+
+.box
+    margin-right: 14px
+    +m
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        z-index: 5
+        margin-right: 0
+        visibility: hidden
+        opacity: 0
+        transition: visibility .2s, opacity .2s
+        &.visible
+            visibility: visible
+            opacity: 1
+
+.closeSearch,
+.openSearch
+    display: none
+    width: 42px
+    height: 42px
+    font-size: 0
+    -webkit-tap-highlight-color: rgba(0,0,0,0)
+    +m
+        display: block
+
+.closeSearch
+    position: absolute
+    top: 0
+    right: 4px
+    z-index: 8
+    svg
+        fill: $e5
+
+.openSearch
+    margin-right: 12px
+    border-radius: 50%
+    background: rgba($p0, .07)
+    svg
+        fill: $p0
+
+.avatar
+    position: relative
+    width: 48px
+    height: 48px
+    border-radius: 50%
+    border: 7px solid #2C3542
+    +m
+        width: 42px
+        height: 42px
+        border-width: 6px
+    img
+        border-radius: 50%
+
+.overlay
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 10
+    background: rgba(26, 28, 30, 0.3)
+    backdrop-filter: blur(6.5px)
+    visibility: hidden
+    opacity: 0
+    transition: all .3s
+    &.visible
+        +t
+            visibility: visible
+            opacity: 1

@@ -1,0 +1,136 @@
+@import @/styles/helpers
+
+.select
+    position: relative
+    &.active
+        z-index: 10
+    &.selectMedium
+        .toggle
+            height: 48px
+            padding: 0 17px
+            border-radius: 24px
+        .dropdown
+            border-radius: 8px
+        .option
+            padding: 11px 18px
+        .preview
+            width: 32px
+    &.selectSmall
+        .toggle
+            height: 21px
+            padding: 0
+            border-radius: 0
+            border: none
+            color: $s3
+            svg
+                width: 16px
+                height: 16px
+                fill: $s3
+        .icon
+            padding-left: 6px
+        .dropdown
+            left: auto
+            right: -8px
+            width: auto
+            min-width: calc(100% + 16px)
+            border-radius: 8px
+        .option
+            padding: 4px 8px
+        .preview
+            width: 27px
+            margin-right: 8px
+
+.label
+    margin-bottom: 3px
+    font-size: 12px
+    line-height: 1.6
+    font-weight: 500
+    color: $s3
+
+.inner
+    position: relative
+    z-index: 5
+
+.toggle
+    display: flex
+    align-items: center
+    width: 100%
+    height: 62px
+    padding: 0 23px
+    border: 1px solid $s2
+    border-radius: 15px
+    background: $p0
+    text-align: left
+    font-size: 14px
+    font-weight: 500
+    letter-spacing: -0.02em
+    color: $s5
+    -webkit-tap-highlight-color: rgba(0,0,0,0)
+    transition: border-color .2s
+    &.active
+        border-color: $i5
+        .icon
+            svg
+                transform: scale(1, -1)
+
+.value
+    flex-grow: 1
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+
+.icon
+    flex-shrink: 0
+    margin-left: auto
+    padding-left: 12px
+    font-size: 0
+    svg
+        fill: $s5
+        transition: transform .2s
+
+.preview
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-shrink: 0
+    width: 40px
+    height: 16px
+    margin-right: 12px
+    font-size: 0
+
+.drop
+    margin-right: 12px
+
+.title
+    color: rgba($s4, .7)
+
+.dropdown
+    position: absolute
+    top: calc(100% + 2px)
+    left: 0
+    width: 100%
+    background: $p0
+    border-radius: 15px
+    box-shadow: 0 5px 20px rgba($s9, .1)
+    overflow: hidden
+    &.dropdownUp
+        top: auto
+        bottom: calc(100% + 2px)
+        box-shadow: 0 -5px 20px rgba($s9, .1), 0 2px 10px rgba($s9, .05)
+
+.option
+    display: flex
+    align-items: center
+    width: 100%
+    padding: 16px 24px
+    text-align: left
+    font-size: 14px
+    font-weight: 500
+    letter-spacing: -0.02em
+    color: $s5
+    transition: background .2s, color .2s
+    &:hover
+        background: rgba($s5, .05)
+    &.active
+        background: $p5
+        color: $p0
